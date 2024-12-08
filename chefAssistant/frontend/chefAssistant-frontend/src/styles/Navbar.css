@@ -1,0 +1,48 @@
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 20px; /* Ajuste del tamaño */
+    background: rgba(245, 245, 245, 0.9); /* Fondo semitransparente */
+    border-bottom-left-radius: 10px; /* Borde redondeado en la esquina inferior izquierda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    z-index: 1000; /* Asegura que esté sobre todo */
+}
+
+/* Menú del navbar */
+.navbar-menu {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex;
+    gap: 15px; /* Espaciado entre elementos */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Alinea verticalmente */
+}
+
+/* Links del navbar */
+.navbar-link, .navbar-button {
+    text-decoration: none; /* Sin subrayado */
+    color: #6b4423; /* Marrón suave */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: none; /* Sin fondo por defecto */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+/* Hover en links */
+.navbar-link:hover, .navbar-button:hover {
+    background-color: #6b4423; /* Marrón suave al hacer hover */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Asegura que no se subraye en hover */
+}
+
+/* Botón específico */
+.navbar-button {
+    background: none;
+    border: none;
+}

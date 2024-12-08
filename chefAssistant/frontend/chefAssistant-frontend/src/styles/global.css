@@ -1,0 +1,82 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo del body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Color de respaldo por si la imagen no carga */
+    color: #333; /* Texto oscuro */
+    line-height: 1.6;
+}
+
+/* Fondo personalizado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/fondo-body.jpg'); /* Ruta a la imagen */
+    background-size: cover; /* La imagen cubre todo el ancho */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* La imagen permanece fija al hacer scroll */
+    background-color: rgba(255, 255, 255, 0.8); /* Blanco casi transparente superpuesto */
+    z-index: -1; /* Se asegura de estar detrás de todo */
+    opacity: 0.22; /* Imagen extremadamente clara */
+}
+
+/* Contenido principal */
+main {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+}
+
+/* Estilo de enlaces */
+a {
+    text-decoration: none !important;
+    color: #6b4423; /* Marrón suave */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botones */
+button {
+    font-family: inherit;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #6b4423; /* Marrón suave */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #55351c; /* Marrón un poco más oscuro */
+}
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    margin-bottom: 15px;
+}

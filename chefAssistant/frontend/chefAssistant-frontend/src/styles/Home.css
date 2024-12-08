@@ -1,0 +1,91 @@
+/* Contenedor principal */
+.home-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 20px auto; /* Centrar contenedor en la página */
+}
+
+/* Título principal */
+.home-title {
+    font-size: 3.0rem;
+    color: #3d210a; /* Marrón oscuro */
+    margin-bottom: 30px;
+}
+
+/* Contenedor de los módulos */
+.modules-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño responsive */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none !important; /* Asegura que no haya subrayado en hover */
+}
+
+/* Tarjetas de los módulos */
+.module-card {
+    width: 250px; /* Tamaño fijo */
+    height: 350px; /* Altura fija */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Animación en hover */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    align-items: center;
+    padding: 20px;
+    background-color: transparent; /* Fondo transparente por defecto */
+    text-decoration: none !important; /* Asegura que no haya subrayado en hover */
+}
+
+/* Hover para la tarjeta */
+.module-card:hover {
+    transform: scale(1.05); /* Efecto de ampliación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    background-color: rgba(245, 245, 220, 0.8); /* Fondo beige translúcido */
+    text-decoration: none !important; /* Asegura que no haya subrayado en hover */
+}
+
+/* Imagen del módulo */
+.module-image {
+    width: 100%;
+    height: 180px; /* Imagen de tamaño fijo */
+    object-fit: cover; /* Mantener proporciones */
+    border: 2px solid #6b4423; /* Borde marrón oscuro */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Espaciado entre imagen y título */
+}
+
+/* Contenedor para el contenido (título) */
+.module-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - 190px); /* Resto del espacio después de la imagen */
+    width: 100%;
+}
+
+/* Título del módulo */
+.module-title {
+    font-size: 1.5rem; /* Tamaño ajustado */
+    color: #3d210a; /* Marrón oscuro */
+    margin: 10px 0; /* Espaciado uniforme */
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden; /* Recorta si es demasiado largo */
+    white-space: nowrap; /* No permite líneas múltiples */
+    text-decoration: none !important; /* Sin subrayado */
+    cursor: pointer;
+    transition: color 0.3s; /* Transición de color suave */
+}
+
+/* Hover para el título */
+.module-title:hover {
+    text-decoration: none !important; /* Asegura que no haya subrayado en hover */
+    color: #55351c; /* Marrón más oscuro al hacer hover */
+}

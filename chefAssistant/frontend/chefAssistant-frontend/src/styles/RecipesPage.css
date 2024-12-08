@@ -1,0 +1,239 @@
+/* Contenedor general de la página */
+.recipes-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #b38b6b3d; /* Fondo semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos principales */
+.recipes-container h1,
+.recipes-container h2 {
+    text-align: center;
+    color: #6b4423; /* Marrón */
+    margin-bottom: 50px; /* Más espacio entre el título y los elementos siguientes */
+    font-size: 2.5rem; /* Tamaño más grande */
+    line-height: 1.5; /* Espaciado interno en los títulos */
+}
+
+/* Botones generales */
+.recipes-container button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6b4423; /* Marrón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipes-container button:hover {
+    background-color: #55351c; /* Marrón oscuro */
+}
+
+/* Lista de recetas */
+.recipe-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño responsive */
+    gap: 30px; /* Más espacio entre las tarjetas */
+}
+
+/* Tarjeta de receta */
+.recipe-card {
+    margin-bottom: 30px; /* Más espacio entre tarjetas (para dispositivos que no soportan grid gap) */
+    padding: 30px; /* Más espacio interno */
+    border-radius: 10px;
+    background: rgba(245, 245, 220, 0.9); /* Fondo beige translúcido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center; /* Centra todo el contenido */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la receta */
+.recipe-image {
+    width: 100%;
+    max-width: 400px; /* Tamaño máximo de la imagen */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #6b4423; /* Borde marrón */
+}
+
+/* Título de la receta */
+.recipe-title {
+    font-size: 2rem; /* Tamaño más grande */
+    color: #6b4423; /* Marrón oscuro */
+    text-align: center;
+    margin-bottom: 20px; /* Más espacio debajo del título */
+}
+
+/* Títulos de secciones */
+.recipe-section-title {
+    font-size: 1.7rem; /* Tamaño más grande */
+    color: #55351c; /* Marrón más oscuro */
+    margin-top: 20px; /* Más espacio superior */
+    margin-bottom: 10px; /* Más espacio inferior */
+    text-align: center;
+    line-height: 1.5; /* Espaciado interno del texto */
+}
+
+/* Ingredientes y descripción */
+.recipe-ingredients,
+.recipe-description {
+    color: #333; /* Texto oscuro */
+    text-align: justify;
+    margin: 5px 0;
+    overflow-wrap: break-word; /* Ajusta palabras largas */
+    word-wrap: break-word; /* Ajusta palabras largas */
+    word-break: break-word; /* Ajusta palabras largas */
+    line-height: 1.5; /* Espaciado entre líneas */
+    max-height: 300px; /* Tamaño máximo del contenido */
+    overflow-y: auto; /* Permite scroll si es necesario */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Formulario de receta */
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.recipe-form label {
+    font-size: 1.2rem; /* Más grande */
+    color: #6b4423;
+    margin-bottom: 5px;
+}
+
+.recipe-form input[type="text"],
+.recipe-form input[type="file"],
+.recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem; /* Más grande */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes de áreas de texto */
+.recipe-form textarea {
+    resize: none;
+    height: 200px; /* Altura más alta */
+    width: 100%; /* Ancho completo */
+}
+
+.recipe-form textarea[name="ingredientes"],
+.recipe-form textarea[name="descripcion"] {
+    height: 250px; /* Altura mayor para ingredientes y descripción */
+    width: 100%; /* Ancho mayor */
+}
+
+/* Botón de enviar */
+.recipe-form button {
+    align-self: center;
+    width: 150px;
+    color: white;
+    background-color: #6b4423; /* Marrón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-form button:hover {
+    background-color: #55351c; /* Marrón oscuro */
+}
+
+/* Contenedor del formulario */
+.recipe-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.recipe-form-container h2 {
+    font-size: 2.5rem; /* Más grande */
+    color: #6b4423; /* Marrón oscuro */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Campos del formulario */
+.recipe-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem; /* Más grande */
+    color: #55351c; /* Marrón más claro */
+}
+
+.recipe-form-container input[type="text"],
+.recipe-form-container input[type="file"],
+.recipe-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem; /* Más grande */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.recipe-form-container input[type="text"]:focus,
+.recipe-form-container textarea:focus,
+.recipe-form-container input[type="file"]:focus {
+    border-color: #6b4423; /* Marrón oscuro al enfocar */
+    outline: none;
+}
+
+/* Botón de enviar */
+.recipe-form-container button {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6b4423; /* Marrón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.recipe-form-container button:hover {
+    background-color: #55351c; /* Marrón oscuro */
+}
+
+/* Espaciado entre los campos */
+.recipe-form-container div {
+    margin-bottom: 15px;
+}

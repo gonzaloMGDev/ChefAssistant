@@ -1,0 +1,271 @@
+/* Contenedor principal de la galería */
+.galeria-list-container {
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor de la tarjeta de imagen */
+.image-card {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro de la tarjeta */
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botón de eliminar */
+.delete-button-galeria {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #a71d2a; /* Rojo más oscuro */
+}
+
+
+
+/* Sección de cada categoría */
+.categoria-section {
+    margin-bottom: 40px; /* Espacio entre categorías */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+/* Título de cada categoría */
+.categoria-title {
+    font-size: 2rem; /* Tamaño grande para los títulos */
+    color: #6b4423; /* Marrón oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    text-transform: capitalize; /* Asegura que las categorías se vean bien */
+}
+
+/* Contenedor de las imágenes dentro de cada categoría */
+.categoria-images {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten */
+    justify-content: center; /* Centrar las imágenes */
+    gap: 20px; /* Espaciado entre imágenes */
+}
+
+/* Cada tarjeta de imagen */
+.image-card {
+    width: 200px; /* Ancho fijo para las tarjetas */
+    height: 200px; /* Altura fija para mantener proporciones */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde contenido sobrante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover para las tarjetas */
+.image-card:hover {
+    transform: scale(1.05); /* Zoom al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Imagen dentro de la tarjeta */
+.image-card img {
+    width: 100%; /* Asegura que ocupe todo el contenedor */
+    height: 100%; /* Asegura que ocupe todo el contenedor */
+    object-fit: cover; /* Recorta la imagen para ajustarse */
+    border-radius: inherit; /* Coincidir bordes con el contenedor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .image-card {
+        width: 150px; /* Reducir tamaño de las tarjetas en pantallas pequeñas */
+        height: 150px;
+    }
+
+    .categoria-title {
+        font-size: 1.5rem; /* Reducir tamaño de los títulos */
+    }
+
+    .categoria-images {
+        gap: 15px; /* Reducir el espaciado entre imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .categoria-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* Contenedor del formulario */
+.galeria-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título del formulario */
+.galeria-form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6b4423; /* Marrón oscuro */
+}
+
+/* Contenedor de los campos */
+.galeria-form-container div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Etiquetas de los campos */
+.galeria-form-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Estilo de los inputs y selects */
+.galeria-form-container input,
+.galeria-form-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.galeria-form-container input:focus,
+.galeria-form-container select:focus {
+    border-color: #6b4423;
+    outline: none;
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botón para subir imagen */
+.upload-button {
+    background-color: #6b4423; /* Marrón */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button:hover {
+    background-color: #55351c; /* Marrón más oscuro */
+    transform: scale(1.05);
+}
+
+/* Botón para volver */
+.back-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* Contenedor principal de la página de galería */
+.galeria-page-container {
+    max-width: 1200px; /* Limitar el ancho de la página */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+    text-align: center; /* Centrar título y botón */
+}
+
+/* Título de la página */
+.galeria-page-container h1 {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    color: #6b4423; /* Marrón oscuro */
+    margin-bottom: 20px;
+}
+
+/* Botón para añadir imágenes */
+.add-image-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0; /* Separación con el contenido */
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #6b4423; /* Marrón */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón */
+.add-image-button:hover {
+    background-color: #55351c; /* Marrón más oscuro */
+}

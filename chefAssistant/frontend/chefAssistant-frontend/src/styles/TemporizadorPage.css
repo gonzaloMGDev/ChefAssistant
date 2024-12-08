@@ -1,0 +1,222 @@
+/* General container styling */
+.temporizador-page-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto; /* Espacio superior agregado */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.temporizador-page-title {
+    font-size: 2.5rem;
+    color: #6b4423; /* Marrón oscuro */
+    margin-bottom: 20px;
+    margin-top: 30px; /* Margen superior extra */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Button container for alignment */
+.button-container {
+    margin-bottom: 20px;
+}
+
+/* "Añadir Temporizador" button styling */
+.add-temporizador-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #6b4423; /* Marrón oscuro */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-temporizador-button:hover {
+    background-color: #55351c; /* Marrón más oscuro */
+}
+
+
+
+
+
+/* Contenedor general para la lista de temporizadores */
+.temporizador-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 0; /* Eliminado gap, se controlará con margin-bottom */
+}
+
+/* Título de cada temporizador */
+.temporizador-card h3 {
+    font-size: 1.5rem;
+    color: #6b4423; /* Marrón oscuro */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de cada temporizador */
+.temporizador-card {
+    width: 300px;
+    background-color: #f7e3d1; /* Fondo marrón claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px; /* Espacio entre las cajas */
+}
+
+/* Estilo del tiempo como reloj digital */
+.temporizador-card p {
+    font-family: 'Courier New', Courier, monospace; /* Estilo de reloj digital */
+    font-size: 2rem;
+    color: #333; /* Color oscuro para los números */
+    background: #eee; /* Fondo claro */
+    border: 2px solid #6b4423; /* Borde marrón */
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    width: fit-content;
+    margin: 0;
+}
+
+/* Contenedor de los botones */
+.temporizador-card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Botón de comenzar/stop */
+.temporizador-card-buttons .start-button {
+    background-color: #6b4423; /* Marrón */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 90px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.temporizador-card-buttons .start-button:hover {
+    background-color: #55351c; /* Marrón más oscuro */
+}
+
+/* Botón de reset */
+.temporizador-card-buttons .reset-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 90px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.temporizador-card-buttons .reset-button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Botón de eliminar */
+.temporizador-card-buttons .delete-button {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 90px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.temporizador-card-buttons .delete-button:hover {
+    background-color: #a71d2a; /* Rojo más oscuro */
+}
+
+
+
+
+
+
+/* Formulario de creación del temporizador */
+form {
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 40px auto; /* Centra el formulario vertical y horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Título del formulario */
+form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #6b4423; /* Marrón oscuro */
+    margin-bottom: 20px;
+}
+
+/* Estilo general de las etiquetas */
+form label {
+    font-size: 1rem;
+    color: #55351c; /* Marrón suave */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada y área de texto */
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border-color 0.3s ease;
+}
+
+/* Cambia el borde al enfocar los campos */
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+    border-color: #6b4423; /* Marrón oscuro */
+    outline: none;
+}
+
+/* Estilo del botón */
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6b4423; /* Marrón oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+form button:hover {
+    background-color: #55351c; /* Marrón más oscuro */
+}
